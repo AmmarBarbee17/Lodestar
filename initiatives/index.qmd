@@ -1,0 +1,12 @@
+---
+title: "Initiatives"
+listing:
+  contents: listing.yml
+  type: table
+  fields: [title, gantt-section, status]
+  sort: "gantt-section"
+---
+
+> TODO: Initiatives are the top-level work categories that mirror the
+> sections of the project Gantt. Each initiative groups its epics; each
+> epic groups its experiments, issues, and features.

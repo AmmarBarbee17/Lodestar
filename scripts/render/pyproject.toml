@@ -1,0 +1,14 @@
+[project]
+name = "thesis-render-pipeline"
+version = "0.1.0"
+description = "Quarto render pipeline + dispersal + QC for the MS thesis repo."
+requires-python = ">=3.10"
+# Mirrored by the root requirements.txt, which is what the bootstrap
+# instructions install into the root .venv the Quarto hooks run against.
+dependencies = [
+    "pyyaml>=6.0",
+    "matplotlib>=3.8",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,20 @@
+---
+title: "External archive index"
+---
+
+> Files referenced by the archive but **not copied into the repo**
+> (too large for git-lfs to carry efficiently, or already represented
+> elsewhere). They remain at their original cloud paths — record the
+> absolute path so future-you can find them.
+
+## Always-external (vendor + heavy media)
+
+| What | Location |
+|---|---|
+| _(none yet)_ | TODO: e.g. `C:\Users\you\OneDrive - University\research\vendor-installers` |
+
+## Oversize files skipped from buckets (> 25 MB)
+
+| File | Size | Source |
+|---|---|---|
+| _(none yet)_ | — | — |

@@ -1,0 +1,76 @@
+project:
+  type: book
+  # Hooks run via the project venv at .venv/. Bootstrap with:
+  #   py -3.12 -m venv .venv
+  #   .venv\Scripts\python.exe -m pip install -r requirements.txt
+  # On macOS/Linux change ".venv/Scripts/python.exe" to ".venv/bin/python3".
+  #   pre-render  — build the listing manifests (book appendix yaml +
+  #                 satellite `_listing.md` partials), per-item file
+  #                 inventories, git change-history partials, the
+  #                 dashboard board, and the per-WU frozen Gantt PNGs
+  #                 from the Mermaid gantt block in `index.qmd`.
+  #   post-render — renders satellite pages (weekly updates, initiative +
+  #                 epic + item READMEs) as standalone HTML into _site/,
+  #                 content-hash cached (see docs/render-pipeline.md).
+  pre-render:
+    - ".venv/Scripts/python.exe scripts/render/build_listings.py"
+    - ".venv/Scripts/python.exe scripts/render/build_gantt.py"
+    - ".venv/Scripts/python.exe scripts/render/build_file_trees.py"
+    - ".venv/Scripts/python.exe scripts/render/build_revisions.py"
+    - ".venv/Scripts/python.exe scripts/render/build_board.py"
+  post-render:
+    - ".venv/Scripts/python.exe scripts/render/render_satellites.py"
+  render:
+    - "index.qmd"
+    - "chapters/**/*.qmd"
+    - "updates/**/*.qmd"
+    - "archive/**/*.qmd"
+    - "!**/_template.qmd"
+    - "!**/_template/**"
+    - "!**/_*.qmd"
+  output-dir: _site
+
+book:
+  title: "TODO: Thesis Title"
+  author: "TODO: Author Name"
+  date: today
+  # Uncomment once GitHub Pages is set up (see GETTING-STARTED.md):
+  # site-url: "https://TODO-username.github.io/TODO-repo/"
+  sidebar:
+    style: docked
+    search: true
+  chapters:
+    - index.qmd
+    - part: "Background"
+      chapters:
+        - chapters/01-background/index.qmd
+        - chapters/01-background/CH-1a-example-section.qmd
+    - part: "Methods"
+      chapters:
+        - chapters/02-methods/index.qmd
+    - part: "Operations"
+      chapters:
+        - chapters/03-operation/index.qmd
+        - chapters/03-operation/sops/SOP-01-example-procedure.qmd
+    - chapters/CH-04-future-work.qmd
+  appendices:
+    - updates/index.qmd
+    - initiatives/index.qmd
+    - archive/index.qmd
+    - archive/external-index.qmd
+  references: references.bib
+
+bibliography: references.bib
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: [cosmo, styles/thesis.scss]
+    toc: true
+    code-fold: true
+  pdf:
+    documentclass: scrreprt
+    include-in-header: styles/thesis.tex
+    keep-tex: false

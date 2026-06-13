@@ -1,0 +1,47 @@
+---
+title: "TODO — short imperative or noun phrase"
+item-id: TODO-IS-NNN
+type: issue
+epic-id: TODO-epic-slug
+initiative: TODO-initiative-slug
+gantt-id: TODO
+status: open                # open | in-progress | blocked | done
+owner: TODO-owner           # current owner (advisory — see docs/)
+priority: medium            # low | medium | high | critical
+opened-date: TODO-YYYY-MM-DD
+closed-date:                # populated when status: done
+description: TODO — one-liner used in listing tables and the WU roll-up
+related-items: []           # e.g. [A5-EX-002]
+---
+
+## Summary
+
+> TODO — one paragraph. What the problem is, where it sits today, and (once
+> closed) the final resolution. The advisor reads this first; everything below
+> is for the next engineer (or future-me).
+
+## Investigation
+
+> TODO — technical narrative: findings, decisions, the data behind them.
+> Reference media stored under this item's `media/` directory once it
+> exists (placeholder paths stay as code, not links):
+> `![](media/TODO-IS-NNN-IMG-evidence.png)`
+>
+> Cross-link related items with their IDs in prose, e.g.
+> `[A1-EX-002](../../experiments/A1-EX-002-some-slug/README.qmd)`.
+
+## Weekly summaries
+
+<!-- One `### W<N> (<date>)` entry per week the issue moves. Newest on top.
+     The `/disperse` skill appends these and copies the latest one into the
+     weekly update's roll-up. Do not edit older entries — they are the
+     advisor-visible history. -->
+
+### W<N> (TODO-YYYY-MM-DD)
+
+- Status: open
+- TODO — one-bullet "what happened this week"
+
+{{< include _files.md >}}
+
+{{< include _revisions.md >}}

@@ -1,0 +1,30 @@
+---
+title: "TODO — epic title"
+epic-id: TODO-gantt-id-and-slug   # == directory name, e.g. A10-thermal-mapping
+initiative: TODO-initiative-slug
+gantt-id: TODO                    # e.g. A10 — must be unique across all epics
+gantt-dates: [TODO-start, TODO-end]   # ISO dates; mirror the Gantt bar
+status: open                      # open | in-progress | blocked | done
+owner: TODO-owner
+customer: TODO — who this epic serves
+need: TODO — the problem being solved
+benefit: TODO — the payoff when it closes
+thesis-chapters: []               # e.g. [chapters/02-optimize/CH-2b-improvements.qmd]
+related-epics: []                 # e.g. [A3-toolpath-planning-workflow]
+---
+
+## Background
+
+> TODO — why this epic exists; reference parent/sibling epics and the
+> route being taken.
+
+## Status log
+
+<!-- Dated bullets, newest first, each linking its weekly update:
+- **W<N> (YYYY-MM-DD):** what moved this week.
+  → [WU-YYYY-MM-DD week N](../../../../updates/WU-YYYY-MM-DD-week-NN/index.html)
+     Done epics add a `## Resolution` section above the listing. -->
+
+{{< include _listing.md >}}
+
+{{< include _revisions.md >}}

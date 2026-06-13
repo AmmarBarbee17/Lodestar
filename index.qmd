@@ -1,0 +1,64 @@
+---
+title: "TODO: Thesis Title"
+---
+
+This site has two halves. The **thesis** is the prose in
+[Background](chapters/01-background/index.qmd),
+[Methods](chapters/02-methods/index.qmd),
+[Operations](chapters/03-operation/index.qmd), and
+[Future Work](chapters/CH-04-future-work.qmd) — that's what gets bound.
+The rest of the site is the **project-management surface** the thesis
+runs on: a top-level Gantt, the initiative board below, a weekly-update
+log, and an archive of source material.
+
+> TODO: replace this paragraph with the abstract once the thesis is
+> drafted.
+
+## Project schedule
+
+Top-level Gantt covering the work categories the advisor tracks. The
+Mermaid block below is the single source of truth for the schedule.
+Edit this block when the schedule changes; the per-WU frozen PNGs
+(`updates/WU-*/media/gantt.png`) regenerate automatically from it via
+`scripts/render/build_gantt.py`. Add a bar here whenever you scaffold
+a new epic (`.\thesis.ps1 new epic …`).
+
+```{mermaid}
+gantt
+    title TODO Thesis schedule
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    tickInterval 1month
+
+    section A. Research
+    Example Epic                  :active, a1, 2026-06-01, 2026-07-15
+
+    section B. Thesis writing
+    Chapter drafts                :        b1, 2026-07-01, 42d
+    Thesis Draft Target Deadline  :milestone, b2, 2026-10-01, 1d
+    Thesis Submission Deadline    :milestone, b3, 2026-11-09, 1d
+```
+
+## Initiative board
+
+The Gantt's bars are *epics*. Each epic has a README under
+[`initiatives/`](initiatives/index.qmd) with a customer/need/benefit
+brief, related-epics graph, and an items listing. Everything below is
+generated from README front matter by `scripts/render/build_board.py`
+(a pre-render hook) — edit the front matter, never these tables.
+Schedule emphasis (crit bars) lives in the Mermaid Gantt above.
+
+{{< include _board.md >}}
+
+## Where to go from here
+
+- **Reading the thesis** — start with
+  [Background](chapters/01-background/index.qmd) and use the sidebar.
+- **Reviewing weekly progress** — see the
+  [weekly updates](updates/index.qmd) appendix (newest first).
+- **Browsing the project tree** — see the
+  [initiatives](initiatives/index.qmd) appendix; each initiative lists
+  its epics, each epic lists its items + status log.
+- **Looking up source material** — see the [archive](archive/index.qmd)
+  appendix, with an [external index](archive/external-index.qmd) for
+  files too large to carry in git.

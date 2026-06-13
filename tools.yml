@@ -1,0 +1,10 @@
+# Tool library — one entry per physical tool referenced in SOPs.
+# The `tool` shortcode (see _extensions/shortcodes/tool.lua) looks up
+# entries by kebab-case id and renders a standard callout with name,
+# image, and spec. Keep ids stable — SOPs reference them directly.
+
+# torque-wrench-22nm:
+#   name: "TODO: Torque wrench (22 N·m)"
+#   image: data/tools/TODO.jpg
+#   spec: "TODO: range, accuracy, calibration date"
+#   notes: "TODO"

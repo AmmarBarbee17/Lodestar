@@ -1,0 +1,58 @@
+#!/bin/sh
+# pre-commit guard: block large videos from entering the repo.
+#
+# Videos belong on Google Drive. Use
+#   scripts/tools/google-drive-embed/upload_item_video.py
+# which uploads, wires the embed URL into _video_manifest.json, and
+# removes the local file. Once a 200+ MB mp4 reaches LFS, freeing the
+# storage requires a history rewrite or a GitHub support ticket — much
+# easier to never let it land.
+#
+# Threshold defaults to 50 MB (the GitHub "soft" recommendation). To
+# bypass for a genuinely small or one-off case, commit with --no-verify.
+# To activate this hook, set once per clone:
+#   git config core.hookspath scripts/git-hooks
+
+THRESHOLD_MB=50
+THRESHOLD_BYTES=$((THRESHOLD_MB * 1024 * 1024))
+FAIL=0
+
+for f in $(git diff --cached --name-only --diff-filter=AM); do
+    case "$f" in
+        *.mp4|*.mov|*.webm|*.mkv|*.avi|*.m4v)
+            if [ -f "$f" ]; then
+                size=$(wc -c < "$f" | tr -d ' \n\r')
+                if [ "$size" -gt "$THRESHOLD_BYTES" ]; then
+                    size_mb=$((size / 1024 / 1024))
+                    echo "ERROR: $f is ${size_mb} MB (limit: ${THRESHOLD_MB} MB)"
+                    echo "  Large videos go to Google Drive, not the repo."
+                    echo "  Upload with:"
+                    echo "    .venv/Scripts/python.exe scripts/tools/google-drive-embed/upload_item_video.py \\"
+                    echo "      --file '$f' --item-id <item-id>"
+                    echo "  Bypass with: git commit --no-verify (if you really mean it)."
+                    FAIL=1
+                fi
+            fi
+            ;;
+    esac
+done
+
+# Item front-matter drift guard: when initiative items are staged, verify
+# the canonical contract (item-id/type/epic-id/initiative/gantt-id/status)
+# via scripts/render/audit_items.py. Fix drift with:
+#   .venv/Scripts/python.exe scripts/render/audit_items.py --fix
+if git diff --cached --name-only --diff-filter=AM | grep -qE "^initiatives/|^chapters/03-operation/sops/SOP-"; then
+    if [ -x .venv/Scripts/python.exe ]; then
+        PY=.venv/Scripts/python.exe
+    else
+        PY=python
+    fi
+    if ! "$PY" scripts/render/audit_items.py; then
+        echo "ERROR: item front-matter drift detected (see above)."
+        echo "  Fix with: $PY scripts/render/audit_items.py --fix"
+        echo "  Bypass with: git commit --no-verify (if you really mean it)."
+        FAIL=1
+    fi
+fi
+
+exit $FAIL

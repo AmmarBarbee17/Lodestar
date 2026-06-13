@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "quarto.quarto",
+    "streetsidesoftware.code-spell-checker",
+    "ltex-plus.vscode-ltex-plus",
+    "anthropic.claude-code",
+    "bierner.markdown-mermaid",
+    "gruntfuggly.todo-tree",
+    "eamodio.gitlens",
+    "redhat.vscode-yaml"
+  ]
+}

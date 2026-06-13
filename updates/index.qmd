@@ -1,0 +1,13 @@
+---
+title: "Weekly updates"
+listing:
+  contents: listing.yml
+  type: grid
+  fields: [date, title, description]
+  sort: "date desc"
+  page-size: 20
+---
+
+> TODO: Weekly status slides shared with the advisor. Each entry is a
+> standalone revealjs deck. Click any card to open the slides; reveal.js
+> navigation (arrow keys, ESC for overview) applies.

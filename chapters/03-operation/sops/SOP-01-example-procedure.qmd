@@ -1,0 +1,53 @@
+---
+title: "SOP-01: Example procedure"
+owner: TODO Owner
+revisions:
+  - rev: A
+    date: 2026-06-12
+    author: TODO-author
+    approved-by: ""
+    description: Initial template release
+---
+
+{{< revisions >}}
+
+## Purpose
+
+> TODO: One sentence on what this procedure accomplishes and when it
+> applies. (This SOP exists so the template renders a working example
+> of the revision block + profiles + change history — replace it with
+> your first real procedure.)
+
+## Prerequisites
+
+> TODO
+
+::: {.content-visible when-profile="sop-detailed"}
+
+## Detailed procedure
+
+> TODO
+
+:::
+
+::: {.content-visible when-profile="sop-checklist"}
+
+## Checklist
+
+- [ ] TODO
+
+:::
+
+::: {.content-visible when-profile="sop-walkthrough"}
+
+## Guided walkthrough
+
+> TODO
+
+:::
+
+## Verification
+
+> TODO
+
+{{< include _revisions-SOP-01-example-procedure.md >}}

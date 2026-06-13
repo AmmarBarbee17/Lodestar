@@ -1,0 +1,6 @@
+---
+title: "Background"
+---
+
+> TODO: Part intro — why this research area matters and what question
+> the thesis answers.

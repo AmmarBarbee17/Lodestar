@@ -1,0 +1,18 @@
+---
+title: "TODO — initiative title"
+initiative-id: TODO-slug          # == directory name
+gantt-section: "TODO"             # A / B / C … — section in the top-level Gantt
+status: open                      # open | in-progress | blocked | done
+owner: TODO-owner
+description: >
+  TODO — one-liner used on the initiatives listing card.
+---
+
+> TODO — one-paragraph framing of this track: what ties its epics
+> together and how they feed the thesis.
+
+## Epics
+
+{{< include _listing.md >}}
+
+{{< include _revisions.md >}}

@@ -1,0 +1,8 @@
+---
+title: "Methods"
+---
+
+> TODO: Part intro — equipment, experimental setup, and how evidence
+> flows from the lab into the `initiatives/` tree (every experiment in
+> the PM layer that produces thesis-grade results gets written up
+> here).

@@ -1,0 +1,57 @@
+---
+title: Example experiment — what does a worked item look like?
+item-id: A1-EX-001
+type: experiment
+epic-id: A1-example-epic
+initiative: example-research
+gantt-id: A1
+status: open
+owner: TODO Owner
+date: '2026-06-12'
+description: TODO — one-liner used in listing tables and the WU roll-up
+related-items: []
+categories: []
+---
+
+## Research question
+
+> TODO — one sentence. What is being tested or measured, and what hypothesis
+> or contrast does it interrogate?
+
+## Hypothesis
+
+> TODO — what you expect to find and why. Keep falsifiable.
+
+## Method
+
+> TODO — setup, materials, parameters, controls. A small table works well
+> here when there are multiple varied parameters.
+
+## Observations
+
+> TODO — raw findings, including media. Embed images once they exist
+> (placeholder paths stay as code, not links — link_check gates
+> publish on broken targets): `![](images/A1-EX-001-IMG-trial-01.png)`
+>
+> Cross-link related items with their IDs in prose, e.g.
+> `[A1-EX-002](../A1-EX-002-some-slug/README.qmd)`.
+
+## Outcome
+
+> TODO — what this experiment closed, opened, or fed into. Reference the
+> downstream items / WU rollups that consume the result.
+
+## Weekly summaries
+
+<!-- One `### W<N> (<date>)` entry per week the experiment moves. Newest on
+     top. `/disperse` appends entries and rolls the latest one into the WU.
+     Do not edit older entries — they are the advisor-visible history. -->
+
+### W<N> (TODO-YYYY-MM-DD)
+
+- Status: open
+- TODO — one-bullet "what happened this week"
+
+{{< include _files.md >}}
+
+{{< include _revisions.md >}}

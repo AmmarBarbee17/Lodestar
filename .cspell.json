@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Quarto", "revealjs", "gltf", "glb", "Typst",
+    "Mermaid", "Anthropic", "MCP", "kanban",
+    "allowfullscreen", "Gantt", "gantt"
+  ],
+  "ignorePaths": [
+    "_site/**",
+    "_book/**",
+    "_freeze/**",
+    ".quarto/**",
+    "_inbox/**",
+    "archive/**",
+    "**/media/**",
+    "**/*.csv",
+    "**/*.bib"
+  ]
+}

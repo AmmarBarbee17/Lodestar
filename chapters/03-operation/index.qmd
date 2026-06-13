@@ -1,0 +1,10 @@
+---
+title: "Operations"
+---
+
+> TODO: Part intro for operating procedures. SOPs live in `sops/` and
+> render in three audience variants via Quarto profiles
+> (`--profile sop-detailed | sop-checklist | sop-walkthrough`). Each
+> SOP carries a formal revision block (rendered by the
+> `{{< revisions >}}` shortcode) plus an auto-generated git change
+> history.

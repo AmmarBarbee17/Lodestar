@@ -1,0 +1,8 @@
+---
+title: "Example section"
+---
+
+> TODO: First content section. Chapter subsection files follow the
+> `CH-<N><x>-<slug>.qmd` naming convention and are registered in
+> `_quarto.yml` under `book.chapters`. Cite sources with `@key`
+> against `references.bib`.

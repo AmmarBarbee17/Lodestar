@@ -1,0 +1,70 @@
+---
+title: "TODO: SOP title"
+owner: TODO Owner
+revisions:
+  - rev: A
+    date: TODO-YYYY-MM-DD
+    author: TODO-author
+    approved-by: ""          # advisor / lab manager sign-off
+    description: Initial release
+---
+
+<!-- Reference template for every SOP in this directory. Copy this
+file and rename it `SOP-NN-procedure-slug.qmd`, register it in
+_quarto.yml under the Operations part, and append the matching
+`{{< include _revisions-SOP-NN-procedure-slug.md >}}` line at the
+bottom. The three `.content-visible` blocks below render conditionally
+per Quarto profile (sop-detailed / sop-checklist / sop-walkthrough) —
+edit each block for the audience of that variant.
+
+The `revisions:` block is the formal engineering revision record,
+rendered by the {{< revisions >}} shortcode below: add a row (Rev B,
+C, …) whenever the procedure materially changes, and get it signed
+off via `approved-by`. The auto-generated git change history at the
+bottom is the forensic complement — it tracks every commit, no
+ceremony. -->
+
+{{< revisions >}}
+
+## Purpose
+
+> TODO: One sentence on what this procedure accomplishes and when it
+> applies.
+
+## Prerequisites
+
+> TODO: What must be true before starting (state of the equipment,
+> tools in hand, prior SOPs completed).
+
+::: {.content-visible when-profile="sop-detailed"}
+
+## Detailed procedure
+
+> TODO: Long-form narrative walkthrough with rationale, failure
+> modes, and cross-references.
+
+:::
+
+::: {.content-visible when-profile="sop-checklist"}
+
+## Checklist
+
+- [ ] TODO step 1
+- [ ] TODO step 2
+- [ ] TODO step 3
+
+:::
+
+::: {.content-visible when-profile="sop-walkthrough"}
+
+## Guided walkthrough
+
+> TODO: Screenshot/video-heavy first-time-user version. Embed
+> `{{< video >}}` clips and annotated images from the experiment
+> library as needed.
+
+:::
+
+## Verification
+
+> TODO: How to confirm the procedure completed successfully.

@@ -1,0 +1,43 @@
+---
+title: "TODO — imperative phrasing (Build / Wire / Add / …)"
+item-id: TODO-FE-NNN
+type: feature
+epic-id: TODO-epic-slug
+initiative: TODO-initiative-slug
+gantt-id: TODO
+status: open                # open | in-progress | blocked | done
+owner: TODO-owner           # current owner (advisory — see docs/)
+opened-date: TODO-YYYY-MM-DD
+closed-date:                # populated when status: done
+description: TODO — one-liner used in listing tables and the WU roll-up
+related-items: []
+---
+
+## Summary
+
+> TODO — one paragraph. What this feature delivers, who it serves, the
+> current state, and (once shipped) what landed. Customer + benefit framing
+> is fine here, especially for features that span multiple weeks.
+
+## Investigation
+
+> TODO — the build narrative: design choices, surfaces touched, dependencies
+> picked. Reference media in this item's `media/` once it exists
+> (placeholder paths stay as code, not links):
+> `![](media/TODO-FE-NNN-IMG-design.png)`
+>
+> Cross-link the issues this feature resolves or the experiments it depends on.
+
+## Weekly summaries
+
+<!-- One `### W<N> (<date>)` entry per week the feature moves. Newest on top.
+     `/disperse` appends entries and rolls the latest into the WU. -->
+
+### W<N> (TODO-YYYY-MM-DD)
+
+- Status: open
+- TODO — one-bullet "what happened this week"
+
+{{< include _files.md >}}
+
+{{< include _revisions.md >}}

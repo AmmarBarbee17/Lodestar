@@ -1,0 +1,22 @@
+---
+title: "Archive"
+---
+
+> Historical source-of-truth content imported from outside the repo
+> (cloud drives, old proposals, vendor docs). **Large vendor binaries**
+> and pre-hosted media already represented elsewhere are catalogued in
+> [external-index.qmd](external-index.qmd) rather than copied.
+
+## Buckets
+
+Buckets are filesystem dumps under `archive/` — there is no per-bucket
+rendered page. Use a local clone to browse contents; this table is the
+inventory. Files over ~25 MB get an external-index entry instead of a
+copy (git-lfs carries the rest — see `.gitattributes`).
+
+| Bucket | Description | Files |
+|---|---|---|
+| _(none yet)_ | TODO: add a row per imported bucket | — |
+
+See [external-index.qmd](external-index.qmd) for files that stay at
+their original cloud paths.

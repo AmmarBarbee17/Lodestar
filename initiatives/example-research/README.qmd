@@ -1,0 +1,21 @@
+---
+title: "Example Research Track"
+initiative-id: example-research
+gantt-section: "A"
+status: in-progress
+owner: TODO Owner
+description: >
+  Worked example of an initiative — one epic, one experiment, so the
+  first render demonstrates listings, the board, ownership, and
+  revision tables. Replace with your real work categories.
+---
+
+> This initiative exists so a fresh clone renders a complete, working
+> example of the PM surface. Study it, then replace it with your own
+> tracks (see GETTING-STARTED.md §3).
+
+## Epics
+
+{{< include _listing.md >}}
+
+{{< include _revisions.md >}}

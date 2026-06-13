@@ -1,0 +1,6 @@
+---
+title: "Future work"
+---
+
+> TODO: What the thesis opens up but does not close. Future-shell
+> epics in the `initiatives/` tree are good source material here.

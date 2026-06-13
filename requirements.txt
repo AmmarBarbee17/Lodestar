@@ -1,0 +1,6 @@
+# Tier-1 render-pipeline deps for the root .venv (the env the Quarto
+# pre-/post-render hooks in _quarto.yml run against). Mirrors
+# scripts/render/pyproject.toml. Tier-2 tools declare their own deps
+# (per-subdir pyproject.toml or PEP 723 inline metadata).
+PyYAML>=6.0
+matplotlib>=3.8
