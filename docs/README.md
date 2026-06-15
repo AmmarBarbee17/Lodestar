@@ -18,8 +18,7 @@ These render on GitHub (including the Mermaid diagrams) and are *not*
 part of the Quarto site — they document the machine, they aren't
 content the machine renders.
 
-> Examples in these docs use IDs from the reference implementation
-> this template was extracted from (an Automated Fiber Placement
-> thesis — epics like `A5-simulated-collision-avoidance`, items like
-> `A5-EX-002`). The *patterns* are what matter; your slugs and IDs
-> will differ.
+> Examples in these docs mirror the worked example shipped in the repo
+> (the `example-research` initiative, `A1-example-epic`, `A1-EX-001`),
+> so you can cross-reference them against real files. The *patterns*
+> are what matter; your own slugs and IDs will differ.

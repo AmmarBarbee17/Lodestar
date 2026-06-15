@@ -14,7 +14,7 @@ updates/WU-2026-05-21-week-19/
 ## Creating one
 
 ```powershell
-.\thesis.ps1 new wu --title "collision results"   # date defaults to today
+.\thesis.ps1 new wu --title "week 3 results"   # date defaults to today
 ```
 
 The scaffolder copies `updates/_template/`, infers the

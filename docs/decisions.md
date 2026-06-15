@@ -7,9 +7,9 @@ Carried forward from v1:
 
 1. **Profiles over duplication** for SOP variants
    (sop-detailed / sop-checklist / sop-walkthrough).
-2. **`.glb` as the 3D intermediate.** Blender CLI is the preferred
-   converter; lab-PC RobotStudio Premium handles `.rslib` exports the
-   student license can't.
+2. **`.glb` as the 3D-model intermediate** for the `{{< model >}}`
+   shortcode. Blender CLI is the preferred converter from CAD / native
+   3D formats.
 3. **Tool library as YAML + shortcode** (`tools.yml` + the `tool` Lua
    shortcode).
 4. **Plain-text everything, git-tracked.**

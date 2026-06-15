@@ -23,7 +23,7 @@ flowchart LR
 .\thesis.ps1 new feature    --epic A6 --slug opcua-bridge --title "..."
 .\thesis.ps1 new issue      --epic A9 --slug network-drop --title "..." --priority high
 .\thesis.ps1 new epic --initiative research-problems --gantt-id A10 --slug thermal-mapping --title "Thermal Mapping"
-.\thesis.ps1 new wu   --title "collision results"
+.\thesis.ps1 new wu   --title "week 3 results"
 ```
 
 The scaffolder (`scripts/render/new_item.py`) allocates the next free
@@ -37,11 +37,11 @@ truth.
 
 | Type | Pattern | Example |
 |---|---|---|
-| Initiative dir | `<slug>/` (`gantt-section` in front matter) | `research-problems/` |
-| Epic dir | `<gantt-id>-<slug>/` | `A5-simulated-collision-avoidance/` |
-| Item dir | `<gantt-id>-<EX\|FE\|IS>-<NNN>-<slug>/` | `A5-EX-001-addpath-programmatic-editing/` |
-| Weekly update dir | `WU-YYYY-MM-DD-week-NN/` | `WU-2026-05-21-week-19/` |
-| Item media | `<item-id>-<IMG\|VID\|DATA>-<slug>.<ext>` | `A4-EX-002-IMG-trial-01-defect.jpg` |
+| Initiative dir | `<slug>/` (`gantt-section` in front matter) | `example-research/` |
+| Epic dir | `<gantt-id>-<slug>/` | `A1-example-epic/` |
+| Item dir | `<gantt-id>-<EX\|FE\|IS>-<NNN>-<slug>/` | `A1-EX-001-example-experiment/` |
+| Weekly update dir | `WU-YYYY-MM-DD-week-NN/` | `WU-2026-06-12-week-01/` |
+| Item media | `<item-id>-<IMG\|VID\|DATA>-<slug>.<ext>` | `A1-EX-001-IMG-trial-01-result.jpg` |
 
 Item IDs are **epic-scoped**: per-epic counter, prefixed by the epic's
 `gantt-id` for global uniqueness. The prefix survives copy/paste out
@@ -55,18 +55,18 @@ Item README (`type`, dates, `priority` vary by kind):
 
 ```yaml
 ---
-title: "Can RobotStudio replace AddPath for collision detection?"
-item-id: A5-EX-002        # dir-name stem; inferred, never hand-set
+title: "Does approach B outperform approach A on metric X?"
+item-id: A1-EX-002        # dir-name stem; inferred, never hand-set
 type: experiment           # experiment | feature | issue
-epic-id: A5-simulated-collision-avoidance
-initiative: research-problems
-gantt-id: A5
+epic-id: A1-example-epic
+initiative: example-research
+gantt-id: A1
 status: in-progress        # open | in-progress | blocked | done
-owner: Ammar Barbee        # advisory ownership (see below)
-date: 2026-05-07           # experiments; features/issues use opened-/closed-date
+owner: Jane Doe            # advisory ownership (see below)
+date: 2026-06-12           # experiments; features/issues use opened-/closed-date
 description: One-liner for listing tables and WU roll-ups.
-related-items: [A5-IS-002]
-categories: [simulation]
+related-items: [A1-IS-001]
+categories: [example]
 ---
 ```
 
@@ -74,18 +74,18 @@ Epic README:
 
 ```yaml
 ---
-title: "Simulated Collision Avoidance"
-epic-id: A5-simulated-collision-avoidance   # == dir name
-initiative: research-problems
-gantt-id: A5
-gantt-dates: [2026-04-20, 2026-05-26]
+title: "Example Epic"
+epic-id: A1-example-epic   # == dir name
+initiative: example-research
+gantt-id: A1
+gantt-dates: [2026-06-01, 2026-07-15]
 status: in-progress
-owner: Ammar Barbee
-customer: AFP operator / lab manager
+owner: Jane Doe
+customer: who this epic serves
 need: what problem this solves
 benefit: the payoff
-thesis-chapters: [chapters/02-optimize/CH-2b-improvements.qmd]
-related-epics: [A3-toolpath-planning-workflow]
+thesis-chapters: [chapters/01-background/CH-1a-example-section.qmd]
+related-epics: [A2-another-epic]
 ---
 ```
 

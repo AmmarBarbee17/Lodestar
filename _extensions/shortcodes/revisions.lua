@@ -7,7 +7,7 @@
 --   revisions:
 --     - rev: A
 --       date: 2026-06-12
---       author: Ammar Barbee
+--       author: Jane Doe
 --       approved-by: ""
 --       description: Initial release
 --
