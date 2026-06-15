@@ -140,7 +140,11 @@ def epic_tables(initiatives: list[dict]) -> list[str]:
 
 
 def kanban(items: list[dict], stale_cutoff: date) -> list[str]:
-    lines = ["## Item board", "", '::: {.column-page}',
+    # column-body-outset: a little wider than the prose column for the
+    # board, but margin-aware so it never slides under the sidebar/TOC
+    # (plain column-page overlapped them). The grid itself is responsive
+    # (see .kanban in styles/thesis.scss).
+    lines = ["## Item board", "", '::: {.column-body-outset}',
              '<div class="kanban">']
     for status in COLUMNS:
         cards = [i for i in items if i["status"] == status]
