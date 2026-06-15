@@ -1,11 +1,11 @@
-# Quarto Thesis + PM Template
+# Lodestar
 
-Run your thesis **and** the project management behind it from a single
-plain-text git repo, rendered to one navigable website. The thesis
-prose, the schedule, the weekly advisor decks, and the entire
-experiment record live together, all linked, all searchable, all
-portable — `quarto render` reproduces the whole artifact, and nothing
-lives behind a login.
+A Quarto-powered framework for research lifecycle management (a spin on
+PLM), anchored around a thesis. One repo, the single source of truth
+for your chapters and ongoing PM: experiment/issue/feature recording,
+Gantt/kanban, rich RevealJS & HTML. Plain-text, git-native &
+agent-ready across your entire adventure towards the lodestar of your
+work.
 
 **New clone? Start with [GETTING-STARTED.md](GETTING-STARTED.md).**
 

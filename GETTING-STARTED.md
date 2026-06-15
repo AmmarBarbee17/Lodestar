@@ -1,8 +1,8 @@
-# Getting started
+# Getting started with Lodestar
 
-You cloned the template — this checklist turns it into *your* thesis
-repo. Everything else (workflows, conventions, the render pipeline) is
-documented in [docs/](docs/README.md).
+You cloned Lodestar — this checklist turns the template into *your*
+thesis repo. Everything else (workflows, conventions, the render
+pipeline) is documented in [docs/](docs/README.md).
 
 ## 1. One-time machine setup
 

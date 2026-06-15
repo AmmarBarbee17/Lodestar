@@ -1,4 +1,4 @@
-# Quarto thesis — agent guide
+# Lodestar — agent guide
 
 A Quarto **book** (thesis chapters in `chapters/`, the only
 book-rendered content) plus a file-based PM surface rendered as
